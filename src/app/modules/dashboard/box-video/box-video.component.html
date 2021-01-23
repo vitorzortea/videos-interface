@@ -1,0 +1,17 @@
+<section *ngIf="videoSelect">
+  <div class="box-viedo">
+    <form>
+      <input type="text" name="title" [(ngModel)]="videoSelect.title" placeholder="Title">
+      <input *ngIf="videoSelect.button != '#&6xE!gwPAYq'" type="text" name="button" [(ngModel)]="videoSelect.button" placeholder="button">
+      <input type="text" name="url"  [(ngModel)]="videoSelect.url" placeholder="Url">
+      <div class="viewVideo"></div>
+      <button (click)="addChild()">Creat Option</button>
+      <button (click)="deleteMovie()" *ngIf="videoSelect.button != '#&6xE!gwPAYq'">Remove Video</button>
+    </form>
+  </div>
+  <div *ngIf="videoSelect.child" class="child">
+    <ng-container *ngFor="let child of videoSelect.child" >
+      <app-box-video [videoSelect]="child"></app-box-video>
+    </ng-container>
+  </div>
+</section>

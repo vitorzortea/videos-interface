@@ -4,10 +4,14 @@
       <input *ngIf="videoSelect.optionTitle != '#&6xE!gwPAYq'" type="text" name="title" [(ngModel)]="videoSelect.optionTitle" placeholder="Option Title">
       <input type="text" name="url"  [(ngModel)]="videoSelect.url" placeholder="Url">
       <div class="viewVideo"></div>
-      <span>
-        <button (click)="addChild()">Creat Option</button>
-        <button (click)="deleteMovie()" *ngIf="videoSelect.optionTitle != '#&6xE!gwPAYq'">Remove Video</button>
-      </span>
+      <button class="create" (click)="addChild()"><i class="fas fa-plus-circle"></i></button>
+      <button
+        class="delete"
+        (click)="deleteMovie()"
+        *ngIf="videoSelect.optionTitle != '#&6xE!gwPAYq'"
+      >
+        <i class="fas fa-times-circle"></i>
+      </button>
     </form>
   </div>
   <div *ngIf="videoSelect.child" class="child">

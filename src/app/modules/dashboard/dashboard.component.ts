@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.dataJson.setTest();
+    this.dataJson.setVideo();
   }
 
 }

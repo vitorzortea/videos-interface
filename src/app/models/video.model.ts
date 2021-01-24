@@ -1,6 +1,5 @@
 export class Video {
-  title: string;
-  button: string;
+  optionTitle: string;
   url: string;
   child: any[]
 }

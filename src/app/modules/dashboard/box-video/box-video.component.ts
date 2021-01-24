@@ -17,12 +17,12 @@ export class BoxVideoComponent implements OnInit {
   ngOnInit(){}
 
   addChild(){
-    this.videoSelect.child.push( { title: '', button: '', url: '', child: [] } );
+    this.videoSelect.child.push( { button: '', url: '', child: [] } );
   }
 
   deleteMovie(){
     const senha = 'xN6SK8HT&7@6'
-    this.videoSelect.button = senha;
+    this.videoSelect.optionTitle = senha;
     this.teste.deleteVideo(senha)
   }
 

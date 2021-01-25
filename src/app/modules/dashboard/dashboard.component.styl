@@ -1,25 +1,25 @@
 #dash
-  height: 100vh
-  width: calc(100vw - 300px)
+  height: calc(100vh - 53px)
+  width: calc(100vw - 200px)
   overflow: auto
-  background-color: #e5e5e5
-  margin: 0 0 0 auto
+  background-color: #efefef
+  margin: 53px 0 0 auto
 
   #ancora
     position: fixed
     top: 0
-    left 0
-    width: 300px
-    height 100vh
+    left: 0
+    width: 200px
+    height: 100vh
     display: flex
     flex-direction: column
-    align-content center
+    align-content: center
     justify-content: space-between
     background-color: #006780
-    padding: 15px
-    color: white
+    padding: 10px 0px
+    color: #fff
     line-height: 1.2em
-    font-size: 14px
+    font-size: 10px
     text-align: center
     z-index: 2
 
@@ -28,10 +28,10 @@
       margin: 0 auto 10px
 
     &>img
-      width: calc(100% + 100px)
+      width: calc(100% + 70px)
       max-width: none
       height: auto
-      margin: 0 -85px 0 -15px
+      margin-left: -20px
 
     a
       display: inline-table
@@ -39,6 +39,40 @@
       font-size: 25px
 
   #path-videos
-    padding-left: 100px
+    padding-top: 20px
+    padding-left: 70px
     filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.2))
+
+  #interface
+    position: fixed
+    top: 0
+    left: 200px
+    width: calc(100% - 200px)
+    background-image: linear-gradient(to top, #ada996 0%, #f1f1f1 10%, #ffffff 20%, #f2f2f2 97%, #ada996 100%)
+    box-shadow: 2px 0 3px rgba(0,0,0,0.2)
+    height 60px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    z-index 100
+
+    button
+      display: inline-table
+      background-color: #00b880
+      color: white
+      padding: 3px 30px
+      margin: 0 6px
+      font-size: 18px
+      border-radius: 20px
+      cursor: pointer
+
+      &:hover
+        background-color: #0F845D
+
+      &:last-child
+        background-color: #C95555
+
+      &:last-child:hover
+        background-color: #A15555
+
 

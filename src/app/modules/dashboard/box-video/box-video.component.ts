@@ -32,20 +32,10 @@ export class BoxVideoComponent implements OnInit {
   viewVideos(url:string){
     const boxFrame = document.querySelector('#'+this.idVideo);
     let iframe;
-    if(url.match('youtube')){
-      iframe = this.youtube(url);
-    } else if(url.match('vimeo')){
-      iframe = this.vimeo(url);
-    } else if(
-      url.match('.mp4') ||
-      url.match('WebM') ||
-      url.match('.ogg')
-    ){
-      iframe = this.videoTag(url);
-    } else {
-      iframe = 'Url invalid';
-    }
-    alert(iframe);
+    if(url.match('youtube')){ iframe = this.youtube(url); }
+    else if(url.match('vimeo')){ iframe = this.vimeo(url); }
+    else if( url.match('.mp4') || url.match('WebM') || url.match('.ogg') ){ iframe = this.videoTag(url); }
+    else { iframe = 'Url invalid'; }
     boxFrame.innerHTML = iframe;
   }
 
@@ -58,7 +48,6 @@ export class BoxVideoComponent implements OnInit {
     const id = url.substr((url.lastIndexOf("/") + 1), 9)
     return '<iframe src="https://player.vimeo.com/video/'+id+'" style="width: 100%"></iframe>'
   }
-
 
   videoTag(url:string):string{
     return '<video src="'+url+'" webkit-playsinline="" playsinline="" preload="metadata" controls="" style="width: 100%"></video>'

@@ -2,8 +2,14 @@
   <div class="box-viedo">
     <form>
       <input *ngIf="videoSelect.optionTitle != '#&6xE!gwPAYq'" type="text" name="title" [(ngModel)]="videoSelect.optionTitle" placeholder="Option Title">
-      <input type="text" name="url"  [(ngModel)]="videoSelect.url" placeholder="Url">
-      <div class="viewVideo"></div>
+      <input
+        type="text"
+        name="url"
+        [(ngModel)]="videoSelect.url"
+        placeholder="Url"
+        (change)="viewVideos(videoSelect.url)"
+      >
+      <div id={{idVideo}} class="viewVideo"></div>
       <button class="create" (click)="addChild()"><i class="fas fa-plus-circle"></i></button>
       <button
         class="delete"
